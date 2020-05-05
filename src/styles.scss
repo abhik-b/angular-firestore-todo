@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  background: #121018;
+  // padding: 2em;
+  color: #fff;
+}
+.no-messages {
+  padding: 2em;
+  height: 40vh;
+  text-align: center;
+}

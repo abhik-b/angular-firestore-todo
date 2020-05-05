@@ -1,0 +1,27 @@
+//
+.plans-ul {
+  list-style: none;
+  overflow: auto;
+  height: 40vh;
+  margin: 0;
+  padding: 2em;
+}
+.plans-ul li {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 0.5fr;
+  gap: 1em;
+  align-items: center;
+}
+
+//
+::-webkit-scrollbar {
+  width: 5px;
+  height: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background: #fc7e7e;
+  height: 2px;
+}

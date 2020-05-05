@@ -1,0 +1,22 @@
+//
+.tags-ul {
+  list-style: none;
+  display: flex;
+  overflow-x: auto;
+  margin: 0;
+  padding: 0 0.5em;
+  padding-bottom: 3px !important;
+  margin-bottom: 2em !important;
+}
+.tags-ul li {
+  border-radius: 8px;
+  background-color: #2d70ee;
+  padding: 1em;
+  margin-left: 0;
+  margin-right: 1em;
+}
+
+//
+.tags-ul li.activeTab {
+  background-color: #07ff66;
+}

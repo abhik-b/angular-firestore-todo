@@ -1,0 +1,24 @@
+<h1>Add New Plan/Task</h1>
+<form novalidate [formGroup]="planForm" #pform="ngForm" (ngSubmit)="onSubmit()">
+  <input
+    type="text"
+    formControlName="title"
+    name="title"
+    placeholder="title..."
+    pattern="^(?! )[A-Za-z0-9 ]*(?<! )$"
+  />
+  <p *ngIf="formErrors.title">{{formErrors.title}}</p>
+  <div class="form-btn">
+    <div>
+      <label for="TAgs">Tag</label>
+      <select name="TAgs" id="" formControlName="tag" >
+        <option *ngFor="let tag of tags | async" [value]="tag.data.name">
+          <p>{{ tag.data.name }}</p>
+        </option>
+      </select>
+    </div>
+   
+  <input type="submit" value="Add" [disabled]="planForm.invalid" />
+  </div>
+  
+</form>

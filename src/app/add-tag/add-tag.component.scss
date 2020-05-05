@@ -1,0 +1,32 @@
+form {
+  padding: 2em;
+}
+h1 {
+  text-align: center;
+  margin: 1em 0 0 0;
+}
+input[type="text"] {
+  display: block;
+  width: 100%;
+  background: none;
+  border: 0;
+  border-bottom: 2px solid #fc7777 !important;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 1em;
+}
+input[type="submit"] {
+  font-weight: 700;
+  text-transform: uppercase;
+  display: block;
+  width: 100%;
+  background: none;
+  border: 0;
+  background: #fc7777;
+  padding: 10px;
+  margin-bottom: 1em;
+  color: #fff;
+}
+input[type="submit"][disabled] {
+  color: rgba(255, 255, 255, 0.178);
+}

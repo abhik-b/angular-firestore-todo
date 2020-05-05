@@ -1,0 +1,14 @@
+<h1 *ngIf="size>0">Tasks to finish : {{size}}</h1>
+
+<ul class="plans-ul" *ngIf='size>0' >
+  <li *ngFor="let plan of plans | async">
+    <strong>{{ plan.data.title }}</strong>
+    <p *ngIf="plan.data.timestamp">{{ plan.data.timestamp | date }}</p>
+    <span *ngIf="!plan.data.finished" (click)="finisPost(plan.id)">x</span>
+    <span *ngIf="plan.data.finished">y</span>
+  </li>
+
+</ul>
+<div class="no-messages" [hidden]='size>0'>No tasks</div>
+
+<app-tags (queryTagEmitter)="getQueryTag($event)"></app-tags>

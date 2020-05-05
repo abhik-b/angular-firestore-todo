@@ -1,0 +1,15 @@
+<ul class="tags-ul" *ngIf="tags">
+  <li
+    (click)="getQueryTag('notag')"
+    [ngClass]="{ activeTab: query === 'notag' }"
+  >
+    basic
+  </li>
+  <li
+    [ngClass]="{ activeTab: query === tag.data.name }"
+    *ngFor="let tag of tags | async"
+    (click)="getQueryTag(tag.data.name)"
+  >
+    {{ tag.data.name }}
+  </li>
+</ul>

@@ -1,0 +1,6 @@
+<h1>Add New Tag</h1>
+<form novalidate [formGroup]='tagForm' (ngSubmit)="onSubmit()">
+    <input type='text' formControlName='name' pattern="[a-zA-Z]*" placeholder="tag" />
+    <p *ngIf="formErrors.name">{{formErrors.name}}</p>
+    <input type="submit" [disabled]="tagForm.invalid">
+</form> 

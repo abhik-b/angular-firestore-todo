@@ -1,0 +1,7 @@
+
+<h1>Achivements:  <span *ngIf="size>0">{{size}}</span>  </h1>
+<ul *ngIf="size>0">
+  <li *ngFor="let plan of plans | async">{{ plan.data.title }}</li>
+</ul>
+<div class="no-messages" [hidden]='size>0'>No achievements yet</div>
+<app-tags (queryTagEmitter)="getQuery($event)"></app-tags>
